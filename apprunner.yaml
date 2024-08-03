@@ -9,3 +9,6 @@ run:
   command: sh startup.sh
   network:
     port: 8000
+  secrets:
+    - name: django_postgres_DATABASE_URL
+      value-from: "arn:aws:secretsmanager:us-east-1:215633321345:secret:django_postgres_DATABASE_URL-K7u8ng"
